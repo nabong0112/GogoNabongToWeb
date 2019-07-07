@@ -36,7 +36,6 @@ public class Ohhh extends HttpServlet {
 		request.setAttribute("Hi2", data2);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("servletToJsp.jsp"); //리퀘스트 디스패쳐로
-		
 		dispatcher.forward(request, response);
 	}
 
