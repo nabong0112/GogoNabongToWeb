@@ -48,6 +48,7 @@ public class Ex01 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher("Ex01_form.jsp"); //리퀘스트 디스패쳐로
 		dispatcher.forward(request, response);
 		
@@ -65,10 +66,11 @@ public class Ex01 extends HttpServlet {
 	         pstmt = conn.createStatement();
 	         rs = pstmt.executeQuery(query);
 	         
-	         String emp_name = rs.getString("emp_name");
+	         //String emp_name = rs.getString("emp_name");
 	         
 	         while(rs.next()) {
-	        	 System.out.println(rs.getString("emp_name") + " " + rs.getString("gender") +" " + rs.getString("birth_date") +" " + rs.getString("hire_date") + " " );
+	        	 System.out.println(rs.getString("emp_name") + " " + rs.getString("gender") +" " 
+	        			 			+ rs.getString("birth_date") +" " + rs.getString("hire_date") + " " );
 	         }
 	         
 	         
